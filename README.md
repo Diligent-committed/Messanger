@@ -8,6 +8,6 @@ The goals of this project are to practice using:
 Our plan: 
 the three messanger classes we want: 
 * morse code 
-* telegram 
-* encryption 
+* something else  
+* numerical values for letters 
 
