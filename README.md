@@ -11,4 +11,4 @@ the three messanger classes we want:
 * something else  
 * numerical values for letters 
 
-[shift cypher] (https://www.khanacademy.org/computing/computer-science/cryptography/ciphers/a/shift-cipher)
+[shift cypher](https://www.khanacademy.org/computing/computer-science/cryptography/ciphers/a/shift-cipher)
