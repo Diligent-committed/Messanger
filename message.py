@@ -3,8 +3,29 @@ morse = {'a' : '* -  ', 'b' : '- * * *  ', 'c' : '- * - *  ', 'd' : '- * *  ',
 'j' : '* - - -  ', 'k' : '- * -  ', 'l' : '* - * *  ', 'm' : '- -  ', 'n' : '- *  ', 
 'o' : '- - -  ', 'p' : '* - - *  ', 'q' : '- - * -  ','r' : '* - *  ', 's' : '* * *  ', 
 't' : '-  ', 'u' :'* * - -  ', 'v' :'* * * -  ', 'w' : '* - -  ', 'x' : '- * * -  ',
-'y' :'- * - -  ', 'z' : '- - * *  ', ' ' : ' '}
+'y' :'- * - -  ', 'z' : '- - * *  ', ' ' : ' ', '.' : '* * *  -  - - -  * - - *  '}
 
+
+class main:
+	def __init__(self):
+		print('Hello')
+	def intake(self):
+		x = input('What would you like to send? ').casefold()
+		self.message = x
+		x = input('How would you like to send it? ').casefold()
+		self.gens = x
+
+	def translate(self):
+		if self.gens == 'morse':
+			self.secondary = morser(self.message)
+			self.secondary.convert()
+		elif self.gens == 'cypher':
+			self.secondary = cypher(self.message)
+			self.secondary.convert()
+
+	def mitto(self):
+		self.loca = writer('writeto')
+		self.loca.send(self.secondary.output)
 
 
 
@@ -28,11 +49,11 @@ class morser:
 		self.output = ''
 
 	def convert(self):
+		recent = 0
 		for i in range(len(self.info)):
-			if (i + 1)%12 == 0:
-				self.output += morse[self.info[i]]
+			self.output += morse[self.info[i]]
+			if len(self.output) - recent > 60:
 				self.output += '\n'
-			else:
-				self.output += morse[self.info[i]]
+				recent = len(self.output)
 
 

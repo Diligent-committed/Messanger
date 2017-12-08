@@ -11,4 +11,14 @@ choose 3 messenger classes
 '''
 
 
-import message
+from message import main, writer, morser
+
+x = main()
+
+x.intake()
+
+x.translate()
+
+x.mitto()
+
+
