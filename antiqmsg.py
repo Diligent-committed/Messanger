@@ -1,7 +1,6 @@
 '''
 carrier pigeon
 morse-code
-telegraph
 encryption
 
 
@@ -12,3 +11,4 @@ choose 3 messenger classes
 '''
 
 
+import message
