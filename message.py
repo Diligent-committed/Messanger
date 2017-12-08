@@ -56,4 +56,51 @@ class morser:
 				self.output += '\n'
 				recent = len(self.output)
 
+class piglatin:
+	def __init__(self, info):
+		self.info = info.casefold()
+		self.output = ''
 
+	def convert(self):
+		word = ''
+		inter = ''
+		for i in range(len(self.info)):
+			if self.info[i] == ' ':
+				if word != '':
+					if word[0] not in 'aeiouy':
+						for i in range(1,len(word)):
+							inter += word[i]
+						inter += word[0]
+						inter += 'ay '
+					else:
+						inter = word
+						inter += 'ay '
+					self.output += inter
+				inter = ''
+				word = ''
+			elif self.info[i] == '.':
+				if word[0] not in 'aeiouy':
+					for i in range(1,len(word)):
+						inter += word[i]
+					inter += word[0]
+					inter += 'ay. '
+				else:
+					inter = word
+					inter += 'ay. '
+				self.output += inter
+				inter = ''
+				word = ''
+			elif self.info[i] != ' ':
+				word += self.info[i]
+		if word != '':
+			if word[0] not in 'aeiouy':
+				for i in range(1,len(word)):
+					inter += word[i]
+				inter += word[0]
+				inter += 'ay '
+			else:
+				inter = word
+				inter += 'ay '
+			self.output += inter
+			inter = ''
+			word = ''

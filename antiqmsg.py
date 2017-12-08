@@ -11,7 +11,7 @@ choose 3 messenger classes
 '''
 
 
-from message import main, writer, morser
+from message import main, writer, morser, piglatin
 
 x = main()
 
