@@ -1,15 +1,12 @@
-morse = ['a' : '* -', 'b' : '- * * *', 'c' : '- * - *', 'd' : '- * *', 
-'e' : '*', 'f' : '* * - *', 'g' : '- - *', 'h' : '* * * *', 'i' : '* *',
-'j' : '* - - -', 'k' : '- * -', 'l' : '* - * *', 'm' : '- -', 'n' : '- *', 
-'o' : '- - -', 'p' : '* - -*', 'q' : '- - * -','r' : '* - *', 's' : '* * *', 
-'t' : '-', 'u' :'* * - -', 'v' :'* * * -', 'w' : '* - -', 'x' : '- * * -', 
-'y' :'- * - -', 'z' : '- - * *']
+morse = {'a' : '* -  ', 'b' : '- * * *  ', 'c' : '- * - *  ', 'd' : '- * *  ', 
+'e' : '*  ', 'f' : '* * - *  ', 'g' : '- - *  ', 'h' : '* * * *  ', 'i' : '* *  ',
+'j' : '* - - -  ', 'k' : '- * -  ', 'l' : '* - * *  ', 'm' : '- -  ', 'n' : '- *  ', 
+'o' : '- - -  ', 'p' : '* - - *  ', 'q' : '- - * -  ','r' : '* - *  ', 's' : '* * *  ', 
+'t' : '-  ', 'u' :'* * - -  ', 'v' :'* * * -  ', 'w' : '* - -  ', 'x' : '- * * -  ',
+'y' :'- * - -  ', 'z' : '- - * *  ', ' ' : ' '}
 
 
-def morse-code:
-	pass
 
-def 
 
 class writer:
 	def __init__(self, location):
@@ -27,8 +24,15 @@ class writer:
 
 class morser:
 	def __init__(self, info):
-		self.info = info
+		self.info = info.casefold()
 		self.output = ''
 
 	def convert(self):
-		for i in range(len(self.info))
+		for i in range(len(self.info)):
+			if (i + 1)%12 == 0:
+				self.output += morse[self.info[i]]
+				self.output += '\n'
+			else:
+				self.output += morse[self.info[i]]
+
+
