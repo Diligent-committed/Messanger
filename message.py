@@ -8,9 +8,9 @@ morse = {'a' : '* -  ', 'b' : '- * * *  ', 'c' : '- * - *  ', 'd' : '- * *  ',
 revmorse = {'* - ' : 'a', '- * * * ' : 'b', '- * - * ' : 'c', '- * * ' : 'd',
 '* ' : 'e', '* * - * ' : 'f', '- - * ' : 'g', '* * * * ' : 'h', '* * ' : 'i',
 '* - - - ' : 'j', '- * - ' : 'k', '* - * * ' : 'l', '- - ' : 'm', '- * ' : 'n',
-'- - - ' : 'o', '* - - *' : 'p', '- - * - ' : 'q', '* - * ' : 'r', '* * *' : 's',
+'- - - ' : 'o', '* - - * ' : 'p', '- - * - ' : 'q', '* - * ' : 'r', '* * * ' : 's',
 '- ' : 't', '* * - - ' : 'u', '* * * - ' : 'v', '* - - ' : 'w', '- * * - ' : 'x',
-'- * - - ' : 'y', '- - * * ' : 'z'}
+'- * - - ' : 'y', '- - * * ' : 'z', ' ' : ' '}
 
 class main:
 	def __init__(self):
@@ -111,7 +111,6 @@ class piglatin:
 			inter = ''
 			word = ''
 
-
 class decode:
 	def __init__(self, info):
 		self.info = info
@@ -144,10 +143,8 @@ class decode:
 				letter = ''
 
 
-
-
 	def unpiglatin(self):
-
+		print('Error. Piglatin is unnable to be decoded at this time.')
 	def uncypher(self):
-
+		pass
 
