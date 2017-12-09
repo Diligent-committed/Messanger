@@ -3,8 +3,14 @@ morse = {'a' : '* -  ', 'b' : '- * * *  ', 'c' : '- * - *  ', 'd' : '- * *  ',
 'j' : '* - - -  ', 'k' : '- * -  ', 'l' : '* - * *  ', 'm' : '- -  ', 'n' : '- *  ', 
 'o' : '- - -  ', 'p' : '* - - *  ', 'q' : '- - * -  ','r' : '* - *  ', 's' : '* * *  ', 
 't' : '-  ', 'u' :'* * - -  ', 'v' :'* * * -  ', 'w' : '* - -  ', 'x' : '- * * -  ',
-'y' :'- * - -  ', 'z' : '- - * *  ', ' ' : ' ', '.' : '* * *  -  - - -  * - - *  '}
+'y' :'- * - -  ', 'z' : '- - * *  ', ' ' : ' ', '.' : ' * * *  -  - - -  * - - *  '}
 
+revmorse = {'* - ' : 'a', '- * * * ' : 'b', '- * - * ' : 'c', '- * * ' : 'd',
+'* ' : 'e', '* * - * ' : 'f', '- - * ' : 'g', '* * * * ' : 'h', '* * ' : 'i',
+'* - - - ' : 'j', '- * - ' : 'k', '* - * * ' : 'l', '- - ' : 'm', '- * ' : 'n',
+'- - - ' : 'o', '* - - *' : 'p', '- - * - ' : 'q', '* - * ' : 'r', '* * *' : 's',
+'- ' : 't', '* * - - ' : 'u', '* * * - ' : 'v', '* - - ' : 'w', '- * * - ' : 'x',
+'- * - - ' : 'y', '- - * * ' : 'z'}
 
 class main:
 	def __init__(self):
@@ -104,3 +110,44 @@ class piglatin:
 			self.output += inter
 			inter = ''
 			word = ''
+
+
+class decode:
+	def __init__(self, info):
+		self.info = info
+		self.output = ''
+
+	def run(self):
+		x = self.info[0]
+		if x in ['*', '-']:
+			self.unmorse()
+		elif x.isaplpha():
+			self.unpiglatin()
+		elif x.isnumeric():
+			self.uncypher()
+
+	def unmorse(self):
+		inter = 'X'
+		letter = ''
+		for char in self.info:
+			if char != ' ':
+				inter += char
+			elif char == ' ' and inter[-1] == 'X':
+				self.output += ' '
+			elif char == ' ' and inter[-1] != ' ':
+				inter += char
+			elif char == ' ' and inter[-1] == ' ':
+				for i in range(1,len(inter)):
+					letter += inter[i]
+				self.output += revmorse[letter]
+				inter = 'X'
+				letter = ''
+
+
+
+
+	def unpiglatin(self):
+
+	def uncypher(self):
+
+
