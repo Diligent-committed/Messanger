@@ -12,6 +12,11 @@ choose 3 messenger classes
 
 
 from message import main, writer, morser, piglatin
+from numswitch import numswitch
+
+wwresult = numswitch()
+wwresult.encode()
+wwresult.decode()
 
 x = main()
 
