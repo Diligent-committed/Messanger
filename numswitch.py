@@ -1,6 +1,5 @@
 import sys 
 
-#encoder
 original = str(input('what is your message'))
 class numswitch():
 	def __init__ (self, message):
@@ -18,8 +17,4 @@ class numswitch():
 
  
 print (listnum)
-
-#decoder
-	
-
 print(backtoorig)
