@@ -14,7 +14,8 @@ class numswitch():
 		backtoorig = [] 
 		for i in listnum:
 			backtoorig.append(chr(i+97))
+	print (listnum)
+	print(backtoorig)
 
  
-print (listnum)
-print(backtoorig)
+
