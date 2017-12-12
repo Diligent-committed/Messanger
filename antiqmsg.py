@@ -1,22 +1,5 @@
-'''
-carrier pigeon
-morse-code
-encryption
+from message import main, writer, morser, piglatin, cypher decode
 
-
-choose 3 messenger classes
-1 main class
-1 write to file class
-
-'''
-
-
-from message import main, writer, morser, piglatin
-from numswitch import numswitch
-
-wwresult = numswitch()
-wwresult.encode()
-wwresult.decode()
 
 x = main()
 
@@ -27,3 +10,9 @@ x.translate()
 x.mitto()
 
 
+
+x = input('What would you like to decode? ')
+if not x.isalpha():
+	m = decode(x)
+	m.run()
+	print(m.output)
