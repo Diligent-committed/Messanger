@@ -1,9 +1,7 @@
-from message import main, writer, morser, piglatin, cypher decode
+from message import main, writer, morser, piglatin, cypher, decode
 
 
 
-
-from message import main, writer, morser, piglatin, cypher
 
 x = main()
 
